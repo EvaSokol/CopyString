@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.ArrayList;
 
 
 public class FileReader {
@@ -13,27 +14,24 @@ public class FileReader {
 		// TODO Auto-generated method stub
 
 		
-		InputStream in = new InputStream("test.txt");
-		Reader Source = new InputStreamReader(in);
+		InputStream in = new FileInputStream(new File ("test.txt"));
+				
+		ArrayList<String> Lines = new ArrayList<String>();
+		Byte[] line = new Byte[1024];
+		String newstr = "";
 		
-		BufferedReader br = new BufferedReader(Source);
-		
-		byte[] Line = new byte[1024];
-		
-			String str = br.readLine();
-		
-			buf.read(Line);
+			int rb;
 			
-			for (int i=0; i<18; i++) {
-				System.out.print((char)Line[i]);
-				if ((char)Line[i] == '\n') System.out.println("end of string: " + i);
-				if ((int)Line[i] < 0) System.out.println("eof: " + i);
-//				if ((char)Line[i] == 'i') {
-//					System.out.println();
-//					System.out.println("i= " + i);
-//				}
-							}
-			
-			buf.close();
+			while ((rb = in.read()) > 0) {
+				System.out.print((char)rb);
+				if (rb != '\n') newstr +=(char)rb;
+					else { 
+						Lines.add(newstr);
+						System.out.println(newstr);
+						newstr = "";
+					}
+			}
+			System.out.println(Lines.get(0) + Lines.get(1) + Lines.get(2));
+			in.close();
 	}
 }
