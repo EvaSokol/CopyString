@@ -1,11 +1,14 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.LayoutManager;
 import java.awt.Panel;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 
 public class UiFrame {
 
@@ -15,13 +18,15 @@ public class UiFrame {
 		
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(800, 600);
+		frame.setSize(400, 600);
 		
 		JPanel pan = new JPanel();
-		pan.add(new MyPanel());
-		pan.add(new MyPanel());
+		pan.setLayout(new BorderLayout());
 				
-		frame.add(pan);
+		for (int i = 0; i<10; i++)
+			pan.add(new MyPanel(), BorderLayout.AFTER_LAST_LINE);
+				
+		frame.add(pan, FlowLayout.LEFT);
 				
 		frame.setVisible(true);
 	}
