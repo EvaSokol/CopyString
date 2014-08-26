@@ -1,11 +1,5 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.FlowLayout;
-import java.awt.LayoutManager;
-import java.awt.Panel;
-
+import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -15,18 +9,20 @@ public class UiFrame {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		int StringCount = 20;
 		
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(400, 600);
-		
+		frame.setSize(600, 50*StringCount);
+	
 		JPanel pan = new JPanel();
-		pan.setLayout(new BorderLayout());
+		pan.setLayout(new GridLayout(StringCount, 1));
 				
-		for (int i = 0; i<10; i++)
+		for (int i = 0; i<StringCount; i++)
 			pan.add(new MyPanel(), BorderLayout.AFTER_LAST_LINE);
-				
-		frame.add(pan, FlowLayout.LEFT);
+
+		frame.add(pan);
+		
 				
 		frame.setVisible(true);
 	}
@@ -39,19 +35,15 @@ class MyPanel extends JPanel {
 	JPanel pan = new JPanel();
 	
 	MyPanel() {
-	
-		pan.setBackground(Color.GREEN);
-		pan.setSize(300, 200);
-		pan.setLayout(new BorderLayout(5,5));
-		pan.setBounds(10, 10, 200, 300);		
-		
-		JButton display = new JButton("Display");
-		display.setSize(50, 20);
-		pan.add(display, BorderLayout.EAST);
+			
+		JButton display = new JButton("Display01234567890Display");
+		display.setSize(600, 20);
+		display.setEnabled(false);
+		pan.add(display);
 		JButton copyBtn = new JButton("Copy string");
-		pan.add(copyBtn, BorderLayout.WEST);
+		pan.add(copyBtn);
 		JButton partBtn = new JButton("Copy part");
-		pan.add(partBtn, BorderLayout.CENTER);
+		pan.add(partBtn);
 		pan.setVisible(true);
 		
 		add(pan, BorderLayout.CENTER);
