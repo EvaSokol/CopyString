@@ -1,4 +1,6 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
@@ -15,7 +17,9 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class UiFrame {
 
@@ -38,14 +42,9 @@ public class UiFrame {
 			pan.add(new MyPanel(str), BorderLayout.AFTER_LAST_LINE);
 
 		frame.add(pan);
-		
-				
 		frame.setVisible(true);
 		
 	}
-
-	
-
 }
 
 class MyPanel extends JPanel {
@@ -55,9 +54,10 @@ class MyPanel extends JPanel {
 	
 	MyPanel(String str) {
 			
-		JButton display = new JButton(str);
-		display.setSize(600, 20);
-		display.setEnabled(false);
+		JLabel display = new JLabel(str);
+		display.setForeground(Color.BLACK);
+		Font font = new Font(null, 0, 20); 
+		display.setFont(font);
 		pan.add(display);
 		
 		CopyAction listener = new CopyAction(str);
