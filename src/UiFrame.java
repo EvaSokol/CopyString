@@ -26,17 +26,20 @@ public class UiFrame {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
-		UiFrame frame = new UiFrame(FileReader.getList(new File("Chinese.txt")));
+		UiFrame frame = new UiFrame(FileReader.getList(new File("French.txt")));
 	}
 
 	private UiFrame(ArrayList<String> list) {
-				
+		
+		int listSize = list.size();
+		int max = FileReader.getMaxString(list);
+		
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(600, 400);
+		frame.setSize(max+600, listSize*50);
 	
 		JPanel pan = new JPanel();
-		pan.setLayout(new GridLayout(list.size(), 1));
+		pan.setLayout(new GridLayout(listSize, 1));
 				
 		for (String str : list)
 			pan.add(new MyPanel(str), BorderLayout.AFTER_LAST_LINE);
