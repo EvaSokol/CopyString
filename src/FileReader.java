@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 
 public class FileReader {
@@ -53,5 +54,31 @@ public class FileReader {
 		return max;
 	}
 	
+	static File[] getListOfFiles(String path) {
+				
+		File folder = new File(path);
+		File[] listOfFiles = folder.listFiles();
+		ArrayList<File> listTxt = new ArrayList<>();
+		
+		for (int i = 0; i < listOfFiles.length; i++) {
+			if (listOfFiles[i].isFile() & listOfFiles[i].getAbsolutePath().contains(".txt")){
+				System.out.println(listOfFiles[i].getName());
+				listTxt.add(listOfFiles[i]);
+			}
+		}
+		
+		File[] a = new File[listTxt.size()];
+		a = listTxt.toArray(a);
+				
+		return a;
+	}
 	
+	static String[] FileNames(File[] fileList) {
+		int count = fileList.length;
+		String names[] = new String[count];
+		for (int j = 0; j<count; j++)
+			names[j] = fileList[j].getName();
+		
+		return names;
+	}
 }

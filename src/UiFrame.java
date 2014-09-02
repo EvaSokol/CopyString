@@ -4,7 +4,6 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.ActionEvent;
@@ -16,17 +15,24 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 public class UiFrame {
 
+	static File[] catalog;
+	static File currentFile = new File("French.txt");
+	static UiFrame genFrame;
+	
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-
-		UiFrame frame = new UiFrame(FileReader.getList(new File("French.txt")));
+	
+		catalog = FileReader.getListOfFiles(".");
+		genFrame = new UiFrame(FileReader.getList(currentFile));
+		
 	}
 
 	private UiFrame(ArrayList<String> list) {
@@ -36,10 +42,36 @@ public class UiFrame {
 		
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(max+600, listSize*50);
+		frame.setSize(max+600, listSize*65);
 	
 		JPanel pan = new JPanel();
-		pan.setLayout(new GridLayout(listSize, 1));
+		
+		JComboBox<String> combo = new JComboBox(FileReader.FileNames(catalog));
+		ActionListener ActListener = new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JComboBox<String> box = (JComboBox<String>)e.getSource();
+				currentFile = new File((String)box.getSelectedItem());
+//				try {
+//					genFrame = new UiFrame(FileReader.getList(new File((String)box.getSelectedItem())));
+//				} catch (FileNotFoundException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				} catch (UnsupportedEncodingException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				} catch (IOException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				}
+			System.out.println((String)box.getSelectedItem());
+			}
+		};
+		combo.addActionListener(ActListener);
+		
+		pan.add(combo);
+		pan.setLayout(new GridLayout(listSize+1, 1));
 				
 		for (String str : list)
 			pan.add(new MyPanel(str), BorderLayout.AFTER_LAST_LINE);
