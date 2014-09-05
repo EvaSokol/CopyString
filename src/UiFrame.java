@@ -18,33 +18,39 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JPanel;
 
 public class UiFrame {
 
 	static File[] catalog;
-	static File currentFile = new File("French.txt");
+	static File currentFile;
 	static UiFrame genFrame;
+	static ArrayList<String> list;
+	static int listSize;
+	JPanel strPan;
 	
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 	
 		catalog = FileReader.getListOfFiles(".");
-		genFrame = new UiFrame(FileReader.getList(currentFile));
+		currentFile = new File("French.txt");
+		list = FileReader.getList(currentFile);
+		genFrame = new UiFrame();
 		
+
 	}
 
-	private UiFrame(ArrayList<String> list) {
+	private UiFrame() {
 		
-		int listSize = list.size();
+		listSize = list.size();
 		int max = FileReader.getMaxString(list);
 		
-		JFrame frame = new JFrame();
+		final JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(max+600, listSize*65);
 	
-		JPanel pan = new JPanel();
+		final JPanel mainPanel = new JPanel();
+		strPan = new StringsPanel();
 		
 		JComboBox<String> combo = new JComboBox(FileReader.FileNames(catalog));
 		ActionListener ActListener = new ActionListener() {
@@ -53,31 +59,47 @@ public class UiFrame {
 			public void actionPerformed(ActionEvent e) {
 				JComboBox<String> box = (JComboBox<String>)e.getSource();
 				currentFile = new File((String)box.getSelectedItem());
-//				try {
-//					genFrame = new UiFrame(FileReader.getList(new File((String)box.getSelectedItem())));
-//				} catch (FileNotFoundException e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				} catch (UnsupportedEncodingException e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				} catch (IOException e1) {
-//					// TODO Auto-generated catch block
-//					e1.printStackTrace();
-//				}
+				try {
+					list = FileReader.getList(currentFile);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				strPan = new StringsPanel();
+				mainPanel.add(strPan, BorderLayout.AFTER_LAST_LINE);
+				
 			System.out.println((String)box.getSelectedItem());
+			System.out.println("Current File: " + currentFile);
+			frame.repaint();
+			System.out.println("Current File: " + currentFile);
 			}
 		};
 		combo.addActionListener(ActListener);
 		
-		pan.add(combo);
-		pan.setLayout(new GridLayout(listSize+1, 1));
+		mainPanel.add(combo, BorderLayout.AFTER_LAST_LINE);
 				
-		for (String str : list)
-			pan.add(new MyPanel(str), BorderLayout.AFTER_LAST_LINE);
-
-		frame.add(pan);
+		mainPanel.add(strPan, BorderLayout.AFTER_LAST_LINE);
+		frame.add(mainPanel);
+		
 		frame.setVisible(true);
+		
+	}
+}
+
+class StringsPanel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
+	JPanel strPanel = new JPanel();
+
+	StringsPanel() {
+		
+		strPanel.setLayout(new GridLayout(UiFrame.listSize, 1));
+				
+		for (String str : UiFrame.list)
+			strPanel.add(new MyPanel(str), BorderLayout.AFTER_LAST_LINE);
+		
+		strPanel.setVisible(true);
+		add(strPanel);
 		
 	}
 }
