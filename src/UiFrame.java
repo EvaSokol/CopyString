@@ -36,8 +36,7 @@ public class UiFrame {
 		currentFile = new File("French.txt");
 		list = FileReader.getList(currentFile);
 		genFrame = new UiFrame();
-		
-
+	
 	}
 
 	private UiFrame() {
@@ -65,8 +64,29 @@ public class UiFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+				
+				try {
+					list = FileReader.getList(currentFile);
+				} catch (FileNotFoundException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				} catch (UnsupportedEncodingException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				} catch (IOException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
+				
 				strPan = new StringsPanel();
-				mainPanel.add(strPan, BorderLayout.AFTER_LAST_LINE);
+				try {
+					UiFrame.main(null);
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				
 				
 			System.out.println((String)box.getSelectedItem());
 			System.out.println("Current File: " + currentFile);
@@ -117,7 +137,7 @@ class MyPanel extends JPanel {
 		display.setFont(font);
 		pan.add(display);
 		
-		CopyAction listener = new CopyAction(str);
+		CopyListener listener = new CopyListener(str);
 		
 		JButton copyBtn = new JButton("Copy string");
 		copyBtn.addActionListener(listener);
@@ -133,20 +153,18 @@ class MyPanel extends JPanel {
 	
 }
 
-class CopyAction implements ActionListener {
+class CopyListener implements ActionListener {
 
 	String str;
 	
-	CopyAction(String string) {
+	CopyListener(String string) {
 		str = string;
 	}
-	
-	
+		
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getActionCommand().compareTo("Copy string") == 0) {
 			String cbst = toBuffer(str);
-			
 			System.out.println("from buffer: " + cbst);
 		}
 		else {
@@ -158,7 +176,6 @@ class CopyAction implements ActionListener {
 			System.out.println("Result: " + result);
 		};
 	}
-
 
 	private String toBuffer(String string) throws HeadlessException {
 		
