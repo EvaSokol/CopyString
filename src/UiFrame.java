@@ -39,7 +39,7 @@ public class UiFrame {
 	
 	}
 
-	private UiFrame() {
+	private UiFrame(){
 		
 		listSize = list.size();
 		int max = FileReader.getMaxString(list);
@@ -64,27 +64,15 @@ public class UiFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
 				try {
 					list = FileReader.getList(currentFile);
-				} catch (FileNotFoundException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
-				} catch (UnsupportedEncodingException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
 				} catch (IOException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
 				}
-				
+												
 				strPan = new StringsPanel();
-				try {
-					UiFrame.main(null);
-				} catch (Exception e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				
 				
 				
 				
