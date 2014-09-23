@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
@@ -20,7 +21,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class UiFrame {
+import sun.text.normalizer.CharTrie.FriendAgent;
+
+public class UiFrame extends JFrame{
 
 	static File[] catalog;
 	static File currentFile;
@@ -64,15 +67,16 @@ public class UiFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				try {
-					list = FileReader.getList(currentFile);
-				} catch (IOException e2) {
-						// TODO Auto-generated catch block
-						e2.printStackTrace();
-				}
-												
+				
+				mainPanel.remove(strPan);								
 				strPan = new StringsPanel();
 				
+				
+				mainPanel.add(strPan, BorderLayout.AFTER_LAST_LINE);
+								
+				frame.add(mainPanel);
+				frame.repaint();
+				frame.setVisible(true);
 				
 				
 				
@@ -83,6 +87,7 @@ public class UiFrame {
 			}
 		};
 		combo.addActionListener(ActListener);
+		
 		
 		mainPanel.add(combo, BorderLayout.AFTER_LAST_LINE);
 				
