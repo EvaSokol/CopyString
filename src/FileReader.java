@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 
 public class FileReader {
@@ -15,11 +14,11 @@ public class FileReader {
 		
 		ArrayList<String> Lines;
 		
-		Lines = getList(new File ("Chinese.txt"));	
+		Lines = getListOfStrings(new File ("Chinese.txt"));	
 		System.out.println("There are " + Lines.size() + " strings, max length is " + getMaxString(Lines));
 		}
 
-	public static ArrayList<String> getList(File file) throws IOException,
+	public static ArrayList<String> getListOfStrings(File file) throws IOException,
 			FileNotFoundException, UnsupportedEncodingException {
 			
 			ArrayList<String> Lines;

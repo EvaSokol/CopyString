@@ -1,6 +1,5 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
@@ -10,9 +9,7 @@ import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -21,10 +18,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import sun.text.normalizer.CharTrie.FriendAgent;
-
+@SuppressWarnings("serial")
 public class UiFrame extends JFrame{
-
+	
+	final JFrame frame;
 	static File[] catalog;
 	static File currentFile;
 	static UiFrame genFrame;
@@ -36,33 +33,31 @@ public class UiFrame extends JFrame{
 		// TODO Auto-generated method stub
 	
 		catalog = FileReader.getListOfFiles(".");
-		currentFile = new File("French.txt");
-		list = FileReader.getList(currentFile);
+		currentFile = new File("test.txt");
+		list = FileReader.getListOfStrings(currentFile);
 		genFrame = new UiFrame();
 	
 	}
 
 	private UiFrame(){
-		
-		listSize = list.size();
-		int max = FileReader.getMaxString(list);
-		
-		final JFrame frame = new JFrame();
+				
+		frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(max+600, listSize*65);
+		frameInit(frame);
 	
 		final JPanel mainPanel = new JPanel();
 		strPan = new StringsPanel();
 		
-		JComboBox<String> combo = new JComboBox(FileReader.FileNames(catalog));
+		JComboBox<String> combo = new JComboBox<String>(FileReader.FileNames(catalog));
 		ActionListener ActListener = new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				@SuppressWarnings("unchecked")
 				JComboBox<String> box = (JComboBox<String>)e.getSource();
 				currentFile = new File((String)box.getSelectedItem());
 				try {
-					list = FileReader.getList(currentFile);
+					list = FileReader.getListOfStrings(currentFile);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -94,8 +89,17 @@ public class UiFrame extends JFrame{
 		mainPanel.add(strPan, BorderLayout.AFTER_LAST_LINE);
 		frame.add(mainPanel);
 		
+		frameInit(frame);
+		
 		frame.setVisible(true);
 		
+	}
+
+	private void frameInit(JFrame frame) {
+				
+		listSize = list.size();
+		int max = FileReader.getMaxString(list);
+		frame.setSize(max+600, listSize*65);
 	}
 }
 
@@ -142,6 +146,7 @@ class MyPanel extends JPanel {
 		
 		pan.setVisible(true);
 		add(pan, BorderLayout.CENTER);
+				
 	}
 	
 }
