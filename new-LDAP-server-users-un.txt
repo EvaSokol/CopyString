@@ -1,0 +1,100 @@
+﻿
+Chinese: 乗乕哴哵厈厊厎噡刓匼哱嘰
+
+Login1: 厈厊厎噡
+厈厊厎噡@g11n-eva.local
+Pass1: 厈厊厎噡1厈厊厎噡
+mail: chinese1@g11n-eva.local
+
+___________________________
+
+German: ÄÖÜßÁÀÂÉÊ€äöü°áàâéê¢
+
+Login1: ÄßßÁ
+ÄßßÁ
+Pass1: ÄßßÁ1ÄßßÁ
+mail: german1@g11n-eva.local
+
+___________________________
+
+French: ÀÂÇÈÉÊËÎÏÔŒÙÛÜ€àâçèéêëîïôœùûü¢
+
+Login1: ÇÈLÂLÜ
+ÇÈLÂLÜ
+Pass1: ÇÈLÂLÜ1ÇÈLÂLÜ
+mail: french1@g11n-eva.local
+
+___________________________
+
+Japanese: 噂閏云ボ厭ポ院ｱ蚕十申曾
+
+Login1: ボ厭ポ院
+ボ厭ポ院
+Pass1: ボ厭ポ院1ボ厭ポ院
+mail: japanese1@g11n-eva.local
+
+___________________________
+
+Spanish: ÁÉÍÑÓÚÜ¿«€áéíñóúü¡»¢
+
+Login1: ÁÑÍÓÑ
+ÁÑÍÓÑ
+Pass1: ÁÑÍÓÑ1ÁÑÍÓÑ
+mail: spanish1@g11n-eva.local
+
+___________________________
+
+Italian: àÀáÁèÈéÉìÌíÍòÒóÓùÙúÚ«»
+
+Login1: Cècílìá
+Cècílìá
+Pass1: Cècílìá1Cècílìá
+mail: italian1@g11n-eva.local
+
+___________________________
+
+Brazilian: ÁÀÂÃÇÉÊÍÓÒÔÕÚÜáàâãçéêíóòôõúü¢€
+
+Login1: Çãrnâvàl
+Çãrnâvàl
+Pass1: Çãrnâvàl1Çãrnâvàl
+mail: brazilian1@g11n-eva.local
+
+___________________________
+Russian: БбВвГгДдЕеЖПТДрРЯд
+
+Login1: Ёжик
+Ёжик
+Pass1: Ёжик1Ёжик
+mail: russian1@g11n-eva.local
+
+___________________________
+Dutch: ÀÁÂÄÈÉÊËÌÍÎÏÒÓÔàáâäèéêëìíîïòóôÖöÙùÚúÛûÜü€¢
+
+Login1: Nördîsh
+Nördîsh
+Pass1: Nördîsh1Nördîsh
+mail: dutch1@g11n-eva.local
+
+___________________________
+
+Korean: 갅갆갧갨갩갪걉걊걌걑걒걓걕
+
+Login1: 걉걊걌걑
+걉걊걌걑
+Pass1: 걉걊걌걑1걉걊걌걑
+mail: korean1@g11n-eva.local
+
+___________________________
+
+
+cn: Eva Sokolyanskaya\P@ssw0rd
+eva@g11n-eva.local
+
+g11n \ g11n1g11n
+
+___________________________
+
+g11n-eva.local
+CN=Eva Sokolyanskaya,CN=Users,DC=g11n-eva,DC=local
+memberOf: CN=g11n-users,CN=Users,DC=g11n-eva,DC=local

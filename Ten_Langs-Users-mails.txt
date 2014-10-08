@@ -1,0 +1,128 @@
+﻿Chinese: 乗乕哴哵厈厊厎噡刓匼哱嘰
+
+Login1: 匼哱嘰
+匼哱嘰@vlab.lohika.com
+Pass1: 匼哱嘰1匼哱嘰
+mail: chinese1@vlab.lohika.com
+
+Login2: 乗乕哴哵厈
+乗乕哴哵厈@vlab.lohika.com
+Pass2: 乗乕哴哵厈2乗乕哴哵厈
+mail: chinese2@vlab.lohika.com
+___________________________
+
+German: ÄÖÜßÁÀÂÉÊ€äöü°áàâéê¢
+
+Login1: ßÂÖßÀß
+ßÂÖßÀß@vlab.lohika.com
+Pass1: ßÂÖßÀß1ßÂÖßÀß
+mail: german1@vlab.lohika.com
+
+Login2: ÜßÊRüsêr
+ÜßÊRüsêr@vlab.lohika.com
+Pass2: ÜßÊRüsêr2ÜßÊRüsêr
+mail: german2@vlab.lohika.com
+___________________________
+
+French: ÀÂÇÈÉÊËÎÏÔŒÙÛÜ€àâçèéêëîïôœùûü¢
+
+Login1: ÛÇËR
+ÛÇËR@vlab.lohika.com
+Pass1: ÛÇËR1ÛÇËR
+mail: french1@vlab.lohika.com
+
+Login2: Êùrôûçër
+Êùrôûçër@vlab.lohika.com
+Pass2: Êùrôûçër2Êùrôûçër
+mail: french2@vlab.lohika.com
+___________________________
+
+Japanese: 噂閏云ボ厭ポ院ｱ蚕十申曾
+
+Login1: 十申曾
+十申曾@vlab.lohika.com
+Pass1: 十申曾1十申曾
+mail: japanese1@vlab.lohika.com
+
+Login2: ボ厭ポ院ｱ蚕
+ボ厭ポ院ｱ蚕@vlab.lohika.com
+Pass2: ボ厭ポ院ｱ蚕2ボ厭ポ院ｱ蚕
+mail: japanese2@vlab.lohika.com
+___________________________
+
+Spanish: ÁÉÍÑÓÚÜ¿«€áéíñóúü¡»¢
+
+Login1: ÑÓÑÁ
+ÑÓÑÁ@vlab.lohika.com
+Pass1: ÑÓÑÁ1ÑÓÑÁ
+mail: spanish1@vlab.lohika.com
+
+Login2: Üñóñá
+Üñóñá@vlab.lohika.com
+Pass2: Üñóñá2Üñóñá
+mail: spanish2@vlab.lohika.com
+___________________________
+
+Italian: àÀáÁèÈéÉìÌíÍòÒóÓùÙúÚ«»
+
+Login1: ÀLÌLÈ
+ÀLÌLÈ@vlab.lohika.com
+Pass1: ÀLÌLÈ1ÀLÌLÈ
+mail: italian1@vlab.lohika.com
+
+Login2: Òmàíámá
+Òmàíámá@vlab.lohika.com
+Pass2: Òmàíámá2Òmàíámá
+mail: italian2@vlab.lohika.com
+___________________________
+
+Brazilian: ÁÀÂÃÇÉÊÍÓÒÔÕÚÜáàâãçéêíóòôõúü¢€
+
+Login1: ÇÍPÂ
+ÇÍPÂ@vlab.lohika.com
+Pass1: ÇÍPÂ1ÇÍPÂ
+mail: brazilian1@vlab.lohika.com
+
+Login2: Ãtênçíòn
+Ãtênçíòn@vlab.lohika.com
+Pass2: Ãtênçíòn2Ãtênçíòn
+mail: brazilian2@vlab.lohika.com
+___________________________
+Russian: БбВвГгДдЕеЖПТДрРЯд
+
+Login1: БабаЯга
+БабаЯга@vlab.lohika.com
+Pass1: БабаЯга1БабаЯга
+mail: russian1@vlab.lohika.com
+
+Login2: впупкин
+впупкин@vlab.lohika.com
+Pass2: привет
+mail: russian2@vlab.lohika.com
+___________________________
+Dutch: ÀÁÂÄÈÉÊËÌÍÎÏÒÓÔàáâäèéêëìíîïòóôÖöÙùÚúÛûÜü€¢
+
+Login1: ÔPPÂ
+ÔPPÂ@vlab.lohika.com
+Pass1: ÔPPÂ1ÔPPÂ
+mail: dutch1@vlab.lohika.com
+
+Login2: Îêréùmbä
+Îêréùmbä@vlab.lohika.com
+Pass2: Îêréùmbä2Îêréùmbä
+mail: dutch2@vlab.lohika.com
+___________________________
+
+Korean: 갅갆갧갨갩갪걉걊걌걑걒걓걕
+
+Login1: 갨갩갪
+갨갩갪@vlab.lohika.com
+Pass1: 갨갩갪1갨갩갪
+mail: korean1@vlab.lohika.com
+
+Login2: 걌걑걒걓걕
+걌걑걒걓걕@vlab.lohika.com
+Pass2: 걌걑걒걓걕2걌걑걒걓걕
+mail: korean2@vlab.lohika.com
+___________________________
+

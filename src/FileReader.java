@@ -12,10 +12,10 @@ public class FileReader {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		
-		ArrayList<String> Lines;
-		
-		Lines = getListOfStrings(new File ("Chinese.txt"));	
-		System.out.println("There are " + Lines.size() + " strings, max length is " + getMaxString(Lines));
+//		ArrayList<String> Lines;
+//		
+//		Lines = getListOfStrings(new File ("Chinese.txt"));	
+//		System.out.println("There are " + Lines.size() + " strings, max length is " + getMaxString(Lines));
 		}
 
 	public static ArrayList<String> getListOfStrings(File file) throws IOException,

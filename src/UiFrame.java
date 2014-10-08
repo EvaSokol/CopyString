@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.HeadlessException;
@@ -17,6 +18,8 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 
 @SuppressWarnings("serial")
 public class UiFrame extends JFrame{
@@ -27,14 +30,15 @@ public class UiFrame extends JFrame{
 	static UiFrame genFrame;
 	static ArrayList<String> list;
 	static int listSize;
+	JPanel comboPanel;
 	JPanel strPan;
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	
 		catalog = FileReader.getListOfFiles(".");
-		currentFile = new File("test.txt");
-		list = FileReader.getListOfStrings(currentFile);
+	//	currentFile = new File("french.txt");
+		currentFile = catalog[0];
 		genFrame = new UiFrame();
 	
 	}
@@ -42,11 +46,11 @@ public class UiFrame extends JFrame{
 	private UiFrame(){
 				
 		frame = new JFrame();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameInit(frame);
 	
 		final JPanel mainPanel = new JPanel();
-		strPan = new StringsPanel();
+				
+		final JPanel comboPanel = new JPanel();
 		
 		JComboBox<String> combo = new JComboBox<String>(FileReader.FileNames(catalog));
 		ActionListener ActListener = new ActionListener() {
@@ -63,43 +67,55 @@ public class UiFrame extends JFrame{
 					e1.printStackTrace();
 				}
 				
+				frameInit(frame);
 				mainPanel.remove(strPan);								
-				strPan = new StringsPanel();
-				
-				
+				strPan = new StringsPanel(comboPanel);
+								
 				mainPanel.add(strPan, BorderLayout.AFTER_LAST_LINE);
 								
 				frame.add(mainPanel);
-				frame.repaint();
 				frame.setVisible(true);
-				
-				
-				
+							
 			System.out.println((String)box.getSelectedItem());
 			System.out.println("Current File: " + currentFile);
+			
 			frame.repaint();
-			System.out.println("Current File: " + currentFile);
+			
 			}
 		};
 		combo.addActionListener(ActListener);
+		comboPanel.add(combo);
 		
-		
-		mainPanel.add(combo, BorderLayout.AFTER_LAST_LINE);
-				
+		strPan = new StringsPanel(comboPanel);
+	
 		mainPanel.add(strPan, BorderLayout.AFTER_LAST_LINE);
+
+		mainPanel.scrollRectToVisible(frame.getBounds());
+		
 		frame.add(mainPanel);
-		
-		frameInit(frame);
-		
+						
 		frame.setVisible(true);
 		
 	}
 
 	private void frameInit(JFrame frame) {
-				
+		
+		try {
+			list = FileReader.getListOfStrings(currentFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		listSize = list.size();
-		int max = FileReader.getMaxString(list);
-		frame.setSize(max+600, listSize*65);
+		int maxString = FileReader.getMaxString(list);
+		int width = maxString * 11 + 300;
+		int height = listSize*80;
+		frame.setSize(width, height);
+		
+
+		
 	}
 }
 
@@ -108,12 +124,14 @@ class StringsPanel extends JPanel {
 	
 	JPanel strPanel = new JPanel();
 
-	StringsPanel() {
+	StringsPanel(JPanel comboPanel) {
 		
-		strPanel.setLayout(new GridLayout(UiFrame.listSize, 1));
-				
+		strPanel.setLayout(new GridLayout(UiFrame.listSize + 1, 1));
+		
+		strPanel.add(comboPanel);
+		
 		for (String str : UiFrame.list)
-			strPanel.add(new MyPanel(str), BorderLayout.AFTER_LAST_LINE);
+			strPanel.add(new MyPanel(str));
 		
 		strPanel.setVisible(true);
 		add(strPanel);

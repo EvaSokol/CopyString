@@ -1,0 +1,43 @@
+_______________________________________
+
+	Authentification Settings:
+
+
+	LDAP Import Settings:
+1)
+
+Directory provider URL: vlab.lohika.com
+
+LDAP Authentification type: Simple
+
+vlab\g11n P@ssw0rdg1n
+
+2)
+
+Directory base: OU=Other users,OU=People,DC=vlab,DC=lohika,DC=com
+
+base filter: (objectClass=*)
+
+Advanced:	User name: sAMAccountName
+		Full name: sAMAccountName
+
+_______________________________________
+
+1)
+
+Directory provider URL: g11n-eva.local
+
+LDAP Authentification type: Simple
+
+g11n \ g11n1g11n
+
+2)
+
+Directory base: CN=Users,DC=g11n-eva,DC=local
+
+base filter: (objectClass=*)
+
+Advanced:	User name: sAMAccountName
+		Full name: sAMAccountName
+
+_____________________________________________

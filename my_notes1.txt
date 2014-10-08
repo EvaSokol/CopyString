@@ -1,0 +1,70 @@
+Description: Cut UI in "Create Test Parameters" window for Iteration of Test in Test Plan
+
+Steps to reproduce:
+1.Login to QC-site-> Business Components
+2.Create new Component then go to "Parameters" tab -> "Input Parameters" and create New Parameter
+3.Go to Test Plan and Create new Flow test 
+4.Go to "Test Script" tab, Push "Select Components" button and add the Component which was created before
+5.Push "1 Iteration" link-> Create Test Parameters
+6. "Create Test Parameters" window appears
+
+Hawkeye can't catch the area
+
+[L10N][ALM11.5]
+
+
+Reproducible on Dutch build 443
+
+Not Reproducible on Brazil-Portuguese Apollo build 455 (11.50.703). Language removed.
+Partially
+
+Waiting for build 460 for Verification this Defect.
+
+Since it's new feature and the most of the elements of this window is not translated I think Priority
+
+
+Description: Cut UI in "Configuration" tab of  Release Scorecard in Analysis View
+
+Steps to reproduce:
+1.Login to QC-site-> Analysis View
+2.Create new Release Scorecard
+3.Go to "Configuration" tab
+
+
+
+Dear developer,
+Please look on the defect and in case that translation cause the problem,
+Please insert the exact string make the problem.
+After insert the information please assign to ALM Globalization team
+Thanks
+
+__________________________________
+
+Untranslated "Standard Defect report"  button in "Defect Details" window
+
+
+Description: Unnecessary Link for "No Run" status for Test in Test Coverage tab of Requirements
+
+Steps to reproduce:
+1.Login to QC-site-> Testing-> Test Plan
+2.Create some test with status "No Run" by default
+3.Go to Requirements-> Create new Requirement and Go to  Details-> Test Coverage
+4.Push "Select Tests" button ant select created test in the Tree then add it to Coverage
+5. Look for link in "No Run" string in "Coverage Status" column
+
+Expected: No Link for "No Run" status for Test
+
+Result:
+WorkAround exist?: 
+Environment Details:
+OS Client: Win7-32b localized; OS Server: Win2008 R2 localized; BD: Oracle 11g R2; IE 9
+NOT reproducible on:
+L10N
+localized client and localized server without translation folder
+English client and server
+
+Dear developer,
+Please look on the defect and in case that translation cause the problem,
+Please insert the exact string make the problem.
+After insert the information please assign to ALM Globalization team
+Thanks

@@ -1,0 +1,149 @@
+
+
+Hawkeye can't catch the area
+
+[EC][L10N][ALM11.5 SP2]
+[L10N][ALM11.5 SP2]
+[L10N][ALM11.5]
+[L10N][ALM11.0 P09]
+[L10N][ALM12][Large Font]
+[UFT-ALM][L10N]
+[L10N][ALM12.01]
+[L10N][ALM Sarah]
+[UFT-ALM][L10N][ALM Sarah]
+
+R&D/Docs Team:
+
+QUICK_LINKS_ENABLED=Y 
+QUICK_LINKS_PROJECT_ACCESS_DEFAULT=Y
+
+Not Reproducible on Russian ALM Sarah build 1603. Language removed.
+
+Not Reproducible on German ALM12 build 769. Language removed.
+Partially
+
+Reproducible on Italian ALM12.50 build 412. Waiting for Iteration 24.
+
+Not reproducible on Russian ALM 12 build 808 with UFT 12 drop 9.
+
+
+ENABLE_PERFORMANCE_MONITOR_BIRT_REPORTS
+Y
+
+Hawkeye can't catch the control in this area.
+
+Waiting for build 460 for Verification this Defect.
+Waiting for new build to verify this Defect.
+
+
+
+Dear developer,
+Please look on the defect and in case that translation cause the problem,
+Please insert the exact string make the problem.
+After insert the information please assign to ALM Globalization team
+Thanks
+
+__________________________________
+
+Untranslated "Standard Defect report"  button in "Defect Details" window
+
+
+Environment Details:
+
+ALM 12.00 localized, UFT 12.01 drop 5 localized; 
+OS Client: Win7-64b localized; OS Server: Win2008 R2 localized; DB: Oracle 11g R2; IE 10
+
+OS Client: Win7-32b localized; OS Server: Win2008 R2 localized; DB: MS SQL 2008 R2; IE 8, 9
+OS Client: Win7-32b localized; OS Server: Win2008 R2 localized; DB: Oracle 11g R2; IE 9
+OS Client: Win7-32b localized; OS Server: Win2008 x64 localized; DB: Oracle 10;IE 8
+
+OS Client: Win7-32b localized; OS Server: Win2008 R2 localized; DB: Oracle 11.20.4; IE 8
+
+NOT reproducible on:
+I18N
+localized client and localized server without translation folder
+English client and server
+
+
+Chinese Apollo SP1 build 186 (11.50.1042).
+Italian Apollo build 477 (11.50.780)
+Japanese Apollo GA build 480 (11.50.780)
+Italian Apollo SP1 build 187 (11.50.1042)
+PtBr Apollo SP1 build 199 (11.50.97)
+Spanish Apollo build 480 (11.50.780)
+Dutch Apollo SP1 build 210 (11.50.179).
+Chinese Apollo SP1 build 210 (11.50.179).
+German Apollo SP1 build 225 (11.50.266)
+Japanese Apollo SP1 build 240 (11.51.277)
+Korean Apollo SP1 build 240 (11.51.277)
+German Apollo SP1 build 240 (11.50.277)
+Italian Apollo SP1 build 240 (11.51.277).
+Japanese Apollo SP1 build 250 (11.51.608).
+German Apollo SP1 build 260 (11.51.643).
+PtBr Apollo SP1 build 260 (11.51.643)
+Italian Apollo SP1 build 260 (11.51.643).
+PtBr Apollo SP1 build 265 (11.51.643).
+Japanese Apollo SP2 build 280 (11.52.58)
+Spanish Apollo SP2 build 280 (11.52.58)
+Korean Apollo SP2 build 290 (11.52.117)
+Dutch Apollo SP2 build 290 (11.52.117)
+Japanese Apollo SP2 build 300 (11.52.119)
+German Apollo SP2 build 315 (11.52.130)
+Chinese Apollo SP2 build 315 (11.52.130)
+French Apollo SP2 build 315 (11.52.130)
+Italian Apollo SP2 build 315 (11.52.130)
+Russian Apollo SP2 build 315 (11.52.130)
+Spanish Apollo SP2 build 320 (11.52.133)
+Korean Apollo SP2 build 320 (11.52.133)
+Dutch Apollo SP2 build 320 (11.52.133)
+French Apollo SP2 build 330 (11.52.199)
+PtBr Apollo SP2 build 380 (11.52.308)
+Japanese Apollo SP2 build 390 (11.52.321)
+Italian Apollo SP2 build 327
+German Apollo SP2 build 327
+Russian Apollo SP2 build 327
+Japanese Apollo SP2 build 327
+Chinese Apollo SP2 build 327
+French Apollo SP2 build 327
+Spanish Apollo SP2 build 327
+Italian Apollo SP2 build 327
+Russian Apollo SP2 build 327
+Korean Apollo SP2 build 341
+Japanese ALM12 build 45.
+German ALM12 build 45
+Russian ALM12 build 103.
+French ALM12 build 1057
+Chinese ALM12 build 1057
+Italian ALM12 build 1063
+Dutch ALM12 build 1069
+Korean ALM12 build 1080
+Chinese ALM12 build 1087
+Chinese ALM12 itteration 19 build 311
+Korean ALM12 itteration 19 build 311
+Russian ALM12 itteration 19 build 311
+German ALM12 itteration 19 build 311
+Italian ALM12 itteration 19 build 311
+German ALM12 build 391
+Russian ALM12 iteration 20 build 402
+German ALM12 iteration 20 build 402
+Italian ALM12 iteration 20 build 402
+Dutch ALM12 iteration 20 build 402
+Korean ALM12 iteration 20 build 402
+Korean ALM12 build 433
+Spanish ALM12 build 457
+German ALM12 build 479
+Russian ALM12 build 534(516)
+French ALM12 build 534
+French ALM12 build 559
+German ALM12 build 559
+French ALM12 build 583
+German ALM12 build 673
+Korean ALM12 build 711
+Chinese ALM12 build 711
+Russian ALM12 build 711
+Italian ALM12 build 711
+French ALM12 build 711
+Russian ALM Sarah build 907
+Spanish ALM Sarah build 907
+Korean ALM Sarah build 907
+Russian ALM Sarah build 1293
